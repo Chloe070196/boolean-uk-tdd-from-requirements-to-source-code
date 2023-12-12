@@ -46,7 +46,8 @@ describe("create a receipt", () => {
     const result = createReceipt(basket);
 
     //VERIFY
-    expect(result).toEqual(JSON.stringify(basket));
+    // expect(result).toEqual(JSON.stringify(basket));
+    expect(result).toEqual("3 potatoes - 6 GBP, 4 beetroots - 4 GBP, 1 lemon - 5 GBP _________TOTAL: 15GBP");
   });
 
   it("returns 'basket is empty'if there are no items in the basket", () => {
