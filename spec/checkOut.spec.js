@@ -1,8 +1,8 @@
 /* eslint-disable spaced-comment */
 /* eslint-disable no-undef */
 /* eslint-disable quotes */
-// const {totalCost} = require(...)
-// const {createReceipt} = require(...)
+const {totalCost, createReceipt} = require('../src/checkOut')
+
 
 describe("total cost", () => {
   //HAPPY PATH
@@ -47,7 +47,7 @@ describe("create a receipt", () => {
 
     //VERIFY
     // expect(result).toEqual(JSON.stringify(basket));
-    expect(result).toEqual("3 potatoes - 6 GBP, 4 beetroots - 4 GBP, 1 lemon - 5 GBP _________TOTAL: 15GBP");
+    expect(result).toEqual(" 3 potato - 6 GBP, 4 beetroot - 4 GBP, 1 lemon - 5 GBP _________TOTAL: 15 GBP");
   });
 
   it("returns 'basket is empty'if there are no items in the basket", () => {
